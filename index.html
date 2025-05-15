@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Real-Time Out-of-Distribution Failure Prevention via Multi-Modal Reasoning">
+  <meta name="keywords" content="Multi-modal Reasoning in Robotics, OOD Safety, Fallback Synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real-Time Out-of-Distribution Failure Prevention via Multi-Modal Reasoning</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Real-Time Out-of-Distribution Failure Prevention via Multi-Modal Reasoning</h1>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=a0XZgwoNLos"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+          <p style="text-align:center;">
+              <image style="width: 90%; height: 90%" src="static/images/overview.png" class="img-responsive" />
+          </p>
+            <h2 class="subtitle has-text-centered">
+		 <span class="dnerf">FORTRESS</span> is a framework that generates and reasons about semantically safe fallback strategies in real time to prevent out-of-distribution (OOD) failures in open-world environments. Our algorithm <span style="color:#f06292;">identifies goals</span> to implement semantic descriptions of fallback strategies, <span style="color:blue;">anticipates failures modes</span>, and <span style="color:red;">constructs semantic safety cost functions</span> that perceive dangerous state spaces. When a safety response is needed, FORTRESS rapidly produces semantically safe fallback plans.
+            </h2>
+      </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Foundation models can provide robust high-level reasoning on appropriate safety interventions in hazardous scenarios beyond a robot's training data, i.e. out-of-distribution (OOD) failures. However, due to the high inference latency of Large Vision and Language Models, current methods rely on manually defined intervention policies to enact fallbacks, thereby lacking the ability to plan generalizable, semantically safe motions. To overcome these challenges we present FORTRESS, a framework that generates and reasons about semantically safe fallback strategies in real time to prevent OOD failures.
+          </p>
+          <p>
+            At a low frequency in nominal operations, FORTRESS uses multi-modal reasoners to identify goals and anticipate failure modes. When a runtime monitor triggers a fallback response, FORTRESS rapidly synthesizes plans to fallback goals while inferring and avoiding semantically unsafe regions in real time. By bridging open-world, multi-modal reasoning with dynamics-aware planning, we eliminate the need for hard-coded fallbacks and human safety interventions. FORTRESS outperforms on-the-fly prompting of slow reasoning models in safety classification accuracy on synthetic benchmarks and real-world ANYmal robot data, and further improves system safety and planning success in simulation and on quadrotor hardware for urban navigation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quadrotor Drone Hardware Demo</h2>
+        <div class="publication-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a0XZgwoNLos?si=B2aVDgU4UHszwgT6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; mute; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+<div class="columns is-centered">
+
+    <div class="column is-half">
+        <div class="content">
+            <h2 class="title is-3">Semantic Safety Reasoning</h2>
+            <p>
+                We anticipate semantic failure modes using foundation model reasoners and calibrate
+                semantic safety cost functions using text embedding models. We detect
+                semantic OOD failures for an ANYmal robot in a room under construction.
+            </p>
+            <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/xU-egPQjkFo?si=jKlSHZAsLVPdv23T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 100%; height: auto; aspect-ratio: 16 / 9;"></iframe>
+            </div>
+            </div>
+    </div>
+    <div class="column is-half">
+        <h2 class="title is-3">Fallback Strategy Goals</h2>
+        <div class="columns is-centered">
+            <div class="column content">
+                <p>
+                    We translate semantic fallback strategies into relevant goal
+                    points using a VLM. We show goals identified for the strategy
+                    "land on building rooftop" for a drone navigating in an urban
+                    setting in the CARLA simulator.
+                </p>
+               <img src="static/images/molmo_carla.png" class="img-responsive" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Our website is based on the template from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
