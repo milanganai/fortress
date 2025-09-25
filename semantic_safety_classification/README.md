@@ -65,13 +65,6 @@ foundation_model_anticipate_classification/
   pip install openai sentence-transformers scipy numpy pickle-mixin requests torch transformers
   ```
 
-### API Keys
-
-Set the following environment variables with your API keys:
-```bash
-export OPENAI_API_KEY="your_openai_api_key"
-export VOYAGEAI_API_KEY="your_voyageai_api_key"
-```
 
 ### Quick Start
 
